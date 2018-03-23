@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<struts>
+    <beans>
+        <bean name="do" class="business.DoForm"></bean>
+        <bean name="demo" class="loris.demo.DemoBean"></bean>
+    </beans>
+
+    <actions>
+        <action ref="demo" actionClass="loris.demo.DemoAction" path="/demo">
+            <forward name="success" value="/view/success.jsp"></forward>
+            <forward name="fail" value="/view/fail.jsp"></forward>
+        </action>
+    </actions>
+
+</struts>
